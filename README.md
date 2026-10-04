@@ -36,12 +36,11 @@ dont_React/
 │   │   ├── AccordionChallenge.tsx  # Single vs Multi expand accordion
 │   │   └── FormValidation.tsx      # Form validation with touched & blur state
 │   ├── components/                 # 🧩 Workbench UI components
-│   │   ├── Header.tsx              # Navbar with theme toggle & guide modal button
+│   │   ├── Header.tsx              # Navbar with theme toggle
 │   │   ├── Sidebar.tsx             # Search, category filters & challenge cards
 │   │   ├── ChallengeView.tsx       # Tabbed workspace (Playground, Code, Notes)
 │   │   ├── CodeBlock.tsx           # Formatted code view with copy button
-│   │   ├── EventLogger.tsx         # Live real-time event stream viewer
-│   │   └── NewChallengeGuideModal.tsx # Interactive guide on how to add files
+│   │   └── EventLogger.tsx         # Live real-time event stream viewer
 │   ├── context/
 │   │   ├── ThemeContext.tsx        # Light/Dark mode state & localStorage persistence
 │   │   └── EventLoggerContext.tsx  # Event logging stream for testing handlers

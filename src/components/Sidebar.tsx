@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, PlusCircle } from 'lucide-react';
+import { Search } from 'lucide-react';
 import type { Challenge } from '../challenges/types';
 
 interface SidebarProps {
@@ -11,7 +11,6 @@ interface SidebarProps {
   selectedCategory: string;
   setSelectedCategory: (cat: string) => void;
   categories: readonly string[];
-  onOpenGuide: () => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -22,8 +21,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   setSearchQuery,
   selectedCategory,
   setSelectedCategory,
-  categories,
-  onOpenGuide
+  categories
 }) => {
   return (
     <aside className="sidebar">
@@ -102,18 +100,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
             );
           })
         )}
-      </div>
-
-      {/* Footer Add Challenge Button */}
-      <div className="sidebar-footer">
-        <button
-          type="button"
-          onClick={onOpenGuide}
-          className="add-prompt-btn"
-        >
-          <PlusCircle size={16} />
-          <span>Add Custom Test File</span>
-        </button>
       </div>
     </aside>
   );

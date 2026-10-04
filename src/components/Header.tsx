@@ -1,13 +1,12 @@
 import React from 'react';
-import { Code2, Sun, Moon, Plus, Sparkles } from 'lucide-react';
+import { Code2, Sun, Moon, Sparkles } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 interface HeaderProps {
   totalChallenges: number;
-  onOpenGuide: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ totalChallenges, onOpenGuide }) => {
+export const Header: React.FC<HeaderProps> = ({ totalChallenges }) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -41,16 +40,6 @@ export const Header: React.FC<HeaderProps> = ({ totalChallenges, onOpenGuide }) 
           <Sparkles size={14} color="var(--accent-primary)" />
           <span><b>{totalChallenges}</b> Challenges Ready</span>
         </div>
-
-        <button
-          type="button"
-          onClick={onOpenGuide}
-          className="header-btn header-btn-primary"
-          title="See how to add your own files and tests"
-        >
-          <Plus size={16} />
-          <span>Add New Test File</span>
-        </button>
 
         <button
           type="button"
