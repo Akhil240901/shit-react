@@ -5,6 +5,7 @@ import { OnClickMasteryChallenge, onClickMasteryCode } from './OnClickMastery';
 import { DebouncedSearchChallenge, debouncedSearchCode } from './DebouncedSearch';
 import { AccordionChallenge, accordionCode } from './AccordionChallenge';
 import { FormValidationChallenge, formValidationCode } from './FormValidation';
+import { Carousel } from './Carousel';
 
 export const CHALLENGES: Challenge[] = [
   {
@@ -200,6 +201,32 @@ export const CHALLENGES: Challenge[] = [
       'Email regex validates valid formats',
       'Submit button disables when errors are present',
       'Successful submission displays confirmation banner'
+    ]
+  },
+  {
+    id: 'carousel',
+    title: 'Image Carousel',
+    category: 'UI Patterns',
+    difficulty: 'Intermediate',
+    tags: ['carousel', 'slider', 'useState', 'useEffect'],
+    description: 'Build an interactive image carousel with next and previous controls.',
+    component: Carousel,
+    code: '// Carousel implementation in Carousel.tsx',
+    tips: [
+      'Store active slide index with useState.',
+      'Check boundary index conditions when clicking Next or Prev.',
+      'Clean up any timers inside useEffect if implementing auto-play.'
+    ],
+    interviewQuestions: [
+      {
+        question: 'How do you handle wrapping around from the last slide to the first slide?',
+        answer: 'You can use modulo arithmetic: (currentIndex + 1) % totalSlides, or a conditional check: currentIndex === totalSlides - 1 ? 0 : currentIndex + 1.'
+      }
+    ],
+    testChecklist: [
+      'Next button advances to the next slide',
+      'Previous button moves to the previous slide',
+      'Carousel wraps or handles bounds properly'
     ]
   }
 ];
